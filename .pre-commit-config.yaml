@@ -1,0 +1,26 @@
+﻿repos:
+  - repo: 'https://github.com/psf/black'
+    rev: ''
+    hooks:
+      - id: black
+  - repo: 'https://gitlab.com/pycqa/flake8'
+    rev: ''
+    hooks:
+      - id: flake8
+  - repo: 'https://github.com/pre-commit/mirrors-mypy'
+    rev: ''
+    hooks:
+      - id: mypy
+        exclude: 'tests'
+  - repo: 'https://github.com/timothycrosley/isort'
+    rev: ''
+    hooks:
+      - id: isort 
+  - repo: local
+    hooks:
+      - id: pylint
+        name: pylint
+        entry: 'poetry run pylint'
+        language: system
+        types: [python]
+        exclude: 'tests'
