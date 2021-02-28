@@ -16,6 +16,7 @@
     rev: ''
     hooks:
       - id: isort 
+        args: ["--profile", "black"]
   - repo: local
     hooks:
       - id: pylint
