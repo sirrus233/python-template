@@ -21,7 +21,7 @@
     hooks:
       - id: pylint
         name: pylint
-        entry: 'poetry run pylint --disable=C0330'
+        entry: 'poetry run pylint'
         language: system
         types: [python]
         exclude: 'tests'
